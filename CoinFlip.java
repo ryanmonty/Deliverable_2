@@ -48,15 +48,17 @@ public class CoinFlip {
 			 	   };
 			 	  System.out.println();
 			 	  if (headsOrTailsGuess.equalsIgnoreCase("heads")) {
-		 		   		System.out.println("Your guess, heads, came up " + headCounter + " time(s)");
+			 		  	int correctCounter = headCounter;
+		 		   		System.out.println("Your guess, heads, came up " + correctCounter + " time(s)");
 		 		   		
-		 		   		int headPercentage = (headCounter * 100 + (numberOfFlips >> 1)) / numberOfFlips;
+		 		   		int headPercentage = (correctCounter * 100 + (numberOfFlips >> 1)) / numberOfFlips;
 		 		   		System.out.println("That's " + headPercentage + "%.");
 		 		   		}
-		 		   		else if (headsOrTailsGuess.equalsIgnoreCase("tails")) {
-		 		   		System.out.println("Your guess, tails, came up " + tailCounter + " time(s)");	
+		 		  else if (headsOrTailsGuess.equalsIgnoreCase("tails")) {
+		 			  	int correctCounter = tailCounter;
+		 		   		System.out.println("Your guess, tails, came up " + correctCounter + " time(s)");	
 		 		   		
-		 		   		int tailPercentage = (tailCounter * 100 + (numberOfFlips >> 1)) / numberOfFlips;
+		 		   		int tailPercentage = (correctCounter * 100 + (numberOfFlips >> 1)) / numberOfFlips;
 		 		   		System.out.println("That's " + tailPercentage + "%.");
 		 		   	
 		 		   		}
